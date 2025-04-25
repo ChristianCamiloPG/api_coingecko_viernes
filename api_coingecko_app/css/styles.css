@@ -1,34 +1,104 @@
+/* Fondo y base */
 body {
   background-image: url('../img/blockchain.png');
   background-size: cover;
   background-repeat: no-repeat;
-  color: white;
-  text-align: center;
-  font-family: Arial, sans-serif;
+  background-position: center;
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #f0f0f0;
 }
 
+/* Contenedor principal */
 #app {
+  max-width: 900px;
+  margin: 20px auto;
   padding: 20px;
-  background: rgba(0, 0, 0, 0.6);
-  margin: 20px;
+  background: rgba(0, 0, 0, 0.7);
   border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.8);
 }
 
+/* Títulos */
+h1, h2 {
+  color: #00ffc8;
+  margin-bottom: 20px;
+}
+
+/* Lista de criptomonedas */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  background: rgba(255, 255, 255, 0.05);
+  margin-bottom: 12px;
+  padding: 15px 20px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+ul li:hover {
+  transform: scale(1.02);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Precio */
+ul li span {
+  font-weight: bold;
+  color: #00ffc8;
+}
+
+/* Menú de navegación */
 .c-nav {
   position: fixed;
   bottom: 0;
+  left: 0;
   width: 100%;
-  background-color: rgba(0,0,0,0.8);
+  background-color: rgba(0,0,0,0.9);
   display: flex;
   justify-content: space-around;
   padding: 10px 0;
+  border-top: 1px solid #333;
 }
 
 .c-nav-item {
-  background: #444;
+  background: #00ffc8;
   border: none;
-  color: white;
-  padding: 10px;
-  border-radius: 8px;
+  padding: 10px 20px;
+  border-radius: 25px;
+  color: black;
+  font-weight: bold;
   cursor: pointer;
+  transition: background 0.3s;
+}
+
+.c-nav-item:hover {
+  background: #00bfa5;
+}
+
+.loader {
+  border: 8px solid #f3f3f3;
+  border-top: 8px solid #00ffc8;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1s linear infinite;
+  margin: 50px auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Al ocultar */
+.loader.hide {
+  display: none;
 }
