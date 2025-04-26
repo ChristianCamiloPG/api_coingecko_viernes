@@ -13,14 +13,24 @@
       <img src="img/coingecko.png" alt="Logo" class="splash-logo">
       <h1>Cargando CriptoApp...</h1>
     </div>
+
+    <div id="controls" class="controls" style="display:none;">
+      <input type="text" id="search" placeholder="Buscar criptomoneda...">
+      <select id="priceFilter">
+        <option value="all">Todos los precios</option>
+        <option value="1000">Mayor a $1000</option>
+        <option value="100">Mayor a $100</option>
+        <option value="10">Mayor a $10</option>
+      </select>
+    </div>
   </main>
 
   <aside class="c-nav">
-    <button class="c-nav-item" onclick="mostrarLista(criptos)">Top Criptos</button>
-    <button class="c-nav-item" onclick="mostrarFavoritos()">Favoritos</button>
-    <button class="c-nav-item" onclick="mostrarGanadoras()">Mayor Ganancia</button>
-    <button class="c-nav-item" onclick="mostrarPerdedoras()">Mayor Pérdida</button>
-    <button class="c-nav-item" onclick="mostrarEstables()">Estables</button>
+    <button class="c-nav-item" onclick="renderTop()">Top Criptos</button>
+    <button class="c-nav-item" onclick="renderFavoritos()">Favoritos</button>
+    <button class="c-nav-item" onclick="renderGanadoras()">Mayor Ganancia</button>
+    <button class="c-nav-item" onclick="renderPerdedoras()">Mayor Pérdida</button>
+    <button class="c-nav-item" onclick="renderEstables()">Estables</button>
     <button class="c-nav-item" onclick="mostrarAcerca()">Acerca de</button>
   </aside>
 

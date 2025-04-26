@@ -1,11 +1,10 @@
-function mostrarDatos() {
+function mostrarAcerca() {
   const app = document.getElementById('app');
   app.innerHTML = `
-    <h1>API Utilizada: CoinGecko</h1>
-    <img src="img/coingecko.png" alt="CoinGecko" width="150">
-    <p>CoinGecko proporciona precios, volumen y datos de criptomonedas en tiempo real.</p>
-    <p>Usuario GitHub: <strong>Christiancamilopg</strong></p>
-    <p>Nombre Estudiante: <strong>Christian Pulido</strong></p>
-    <p>Versión: <strong>V.1.0.0</strong></p>
+    <h1>Acerca de</h1>
+    <p>App de criptomonedas usando CoinGecko API.</p>
+    <p>Desarrollador: <strong>Tu Nombre</strong></p>
+    <p>Versión: <strong>1.0.0</strong></p>
+    <img src="img/coingecko.png" alt="Logo" width="100">
   `;
 }

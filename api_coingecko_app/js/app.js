@@ -1,5 +1,6 @@
 let criptos = [];
 let favoritos = [];
+let listaActual = [];
 
 async function conexionLista() {
   const loader = document.getElementById('loader');
@@ -9,10 +10,12 @@ async function conexionLista() {
     const res = await fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=50&page=1');
     const data = await res.json();
     criptos = data;
+    listaActual = criptos;
 
     setTimeout(() => {
       loader.classList.add('hide');
-      mostrarLista(criptos);
+      mostrarControles();
+      renderLista();
     }, 2000);
 
   } catch (error) {
@@ -22,3 +25,9 @@ async function conexionLista() {
 }
 
 conexionLista();
+
+function mostrarControles() {
+  document.getElementById('controls').style.display = 'flex';
+  document.getElementById('search').addEventListener('input', renderLista);
+  document.getElementById('priceFilter').addEventListener('change', renderLista);
+}
