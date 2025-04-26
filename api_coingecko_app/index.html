@@ -7,20 +7,26 @@
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <button id="btn-instalar" style="display:none;">Instalar App</button>
 
   <main id="app">
-    <div id="loader" class="loader"></div>
-
+    <div id="loader" class="loader">
+      <img src="img/coingecko.png" alt="Logo" class="splash-logo">
+      <h1>Cargando CriptoApp...</h1>
+    </div>
   </main>
 
   <aside class="c-nav">
-    <button class="c-nav-item" onclick="mostrarDatos()">Información API</button>
-    <button class="c-nav-item" onclick="mostrarLista(criptos)">Lista Criptos</button>
+    <button class="c-nav-item" onclick="mostrarLista(criptos)">Top Criptos</button>
+    <button class="c-nav-item" onclick="mostrarFavoritos()">Favoritos</button>
+    <button class="c-nav-item" onclick="mostrarGanadoras()">Mayor Ganancia</button>
+    <button class="c-nav-item" onclick="mostrarPerdedoras()">Mayor Pérdida</button>
+    <button class="c-nav-item" onclick="mostrarEstables()">Estables</button>
+    <button class="c-nav-item" onclick="mostrarAcerca()">Acerca de</button>
   </aside>
 
   <script src="js/app.js"></script>
   <script src="js/lista.js"></script>
   <script src="js/datos.js"></script>
+
 </body>
 </html>
